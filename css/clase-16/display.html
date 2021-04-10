@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .block p {
+        margin: 0;
+    }
+    .block {
+        background-color: #ffc764;
+        color: #184d47;
+        padding: 20px;
+    }
+    .block--none {
+        display: none;
+    }
+    .block--inline {
+        background-color: #ff884b;
+        display: inline;
+    }
+    .block--block {
+        background-color: #ff884b;
+        display: block;
+    }
+    .block--inline-block {
+        background-color: #ff884b;
+        display: inline-block;
+        height: 3em;
+        width: 60px;
+    }
+    .block--list-item {
+        background-color: #ff884b;
+        display: list-item;
+    }
+    .block--table {
+        background-color: #ff884b;
+        display: table;
+    }
+    .block--table span:first-child {
+        background-color: red;
+    }
+    .block--table span:last-child {
+        background-color: green;
+    }
+    .block--table-row {
+        background-color: #ff884b;
+        display: table-row;
+    }
+    .block--table-row span:first-child {
+        background-color: red;
+    }
+    .block--table-row span:last-child {
+        background-color: green;
+    }
+    .block--flex {
+        background-color: #ff884b;
+        display: flex;
+    }
+    .block--flex span:first-child {
+        background-color: red;
+        width: 30%;
+    }
+    .block--flex span:last-child {
+        background-color: green;
+        width: 40%;
+    }
+    .block--inline-flex {
+        background-color: #ff884b;
+        display: inline-flex;
+        height: 3em;
+        width: 120px;
+    }
+    .block--inline-flex span:first-child {
+        background-color: red;
+    }
+    .block--inline-flex span:last-child {
+        background-color: green;
+    }
+    .block--grid {
+        background-color: #ff884b;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .block--grid span:first-child {
+        background-color: red;
+    }
+    .block--grid span:last-child {
+        background-color: green;
+    }
+    .block--inline-grid {
+        background-color: #ff884b;
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        height: 3em;
+        width: 120px;
+    }
+    .block--inline-grid span:first-child {
+        background-color: red;
+    }
+    .block--inline-grid span:last-child {
+        background-color: green;
+    }
+</style>
+<body>
+    <div>
+        <h2>Display none</h2>
+        <p>El elemento se elimina por completo , como si no estuviera en el código HTML en primer lugar.        </p>
+        <div class="block">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="block--none">Hello world</p> 
+            Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+        </div>
+    </div>
+    <div>
+        <h2>Display inline</h2>
+        <p>El elemento se convierte en un elemento en línea : se comporta como texto simple.</p>
+        <p>Cualquiera height y width aplicado no tendrá ningún efecto.</p>
+        <div class="block">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="block--inline">Hello world</p> 
+            Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+        </div>
+    </div>
+    <div>
+        <h2>Display block</h2>
+        <p>El elemento se convierte en un elemento de bloque : comienza en una nueva línea y ocupa todo el ancho.</p>
+        <div class="block">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="block--block">Hello world</p> 
+            Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+        </div>
+    </div>
+    <div>
+        <h2>Display inline-block</h2>
+        <p>El elemento comparte propiedades tanto de un elemento en línea como de un elemento de bloque :</p>
+        <ul>
+            <li>inline: porque el elemento se comporta como texto simple y se inserta en un bloque de texto</li>
+            <li>block: porque puede aplicar valores height y width</li>
+        </ul>
+        <div class="block">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="block--inline-block">Hello world</p> 
+            Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+        </div>
+    </div>
+    <div>
+        <h2>Display list-item</h2>
+        <p>El elemento se comporta como un elemento de la lista : <li>. La única diferencia con el bloque es que un elemento de lista tiene una viñeta .</p>
+        <div class="block">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="block--list-item">Hello world</p> 
+            Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+        </div>
+    </div>
+    <div>
+        <h2>Display table</h2>
+        <p>El elemento se comporta como una tabla : &lt;table&gt;.</p>
+        <p>Su contenido y sus elementos secundarios se comportan como celdas de tabla.</p>
+        <div class="block">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="block--table">Hello world <span>consectetur</span> <span>adipiscing</span></p> 
+            Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+        </div>
+    </div>
+    <div>
+        <h2>Display table-row</h2>
+        <p>El elemento se comporta como una tabla : &lt;table&gt;.</p>
+        <p>Su contenido y sus elementos secundarios se comportan como celdas de tabla.</p>
+        <div class="block">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="block--table-row">Hello world <span>consectetur</span> <span>adipiscing</span></p> 
+            Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+        </div>
+    </div>
+    <div>
+        <h2>Display flex</h2>
+        <p>El elemento se convierte en un contenedor flexbox . Por sí solo, se comporta como un elemento de bloque.</p>
+        <p>Sus elementos secundarios se convertirán en elementos de caja flexible .</p>
+        <div class="block">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="block--flex"><span>consectetur</span> <span>adipiscing</span></p> 
+            Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+        </div>
+    </div>
+    <div>
+        <h2>Display inline-flex</h2>
+        <p>El elemento comparte propiedades tanto de un elemento en línea como de un elemento flexbox :</p>
+        <ul>
+            <li>inline: porque el elemento se comporta como texto simple y se inserta en un bloque de texto</li>
+            <li>flexbox: porque su elemento hijo se convertirá en elementos de flexbox</li>
+        </ul>
+        <div class="block">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="block--inline-flex"><span>Primer hijo</span> <span>Segundo hijo</span></p> 
+            Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+        </div>
+    </div>
+    <div>
+        <h2>Display grid</h2>
+        <p>El elemento se convierte en un contenedor de rejilla . Por sí solo, se comporta como un elemento de bloque</p>
+        <p>Sus elementos secundarios se convertirán en elementos de cuadrícula .</p>
+        <div class="block">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="block--grid"><span>Primer hijo</span> <span>Segundo hijo</span></p> 
+            Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+        </div>
+    </div>
+    <div>
+        <h2>Display inline-grid</h2>
+        <p>El elemento comparte propiedades tanto de un elemento en línea como de un elemento de cuadrícula :</p>
+        <ul>
+            <li>inline: porque el elemento se comporta como texto simple y se inserta en un bloque de texto</li>
+            <li>grid: porque su elemento hijo se convertirá en elementos flexbox</li>
+        </ul>
+        <div class="block">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="block--inline-grid"><span>Primer hijo</span> <span>Segundo hijo</span></p> 
+            Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        background: #310736;
+        color: #fff;
+        height: 200px;
+        margin: 10px;
+        padding: 0.8em 1em;
+        position: relative;
+    }
+    .block-green {
+        background: #05ffb0;
+        border-radius: 3px;
+        color: #310736;
+        display: block;
+        line-height: 1.2;
+        margin-top: 1em;
+        padding: 1em;
+    }
+    .block-pink {
+        background: #ff3860;
+        border-radius: 3px;
+        color: #310736;
+        display: block;
+        line-height: 1.2;
+        padding: 1em;
+        right: 5px;
+        top: 5px;
+    }
+</style>
+<body>
+    <div class="container">
+        <p>Contenedor padre</p>
+        <div class="block-green" style="position: static;">
+            <strong>positon: static</strong>
+            <div class="block-pink" style="position: absolute;">
+                Elemento hijo<br>
+                position: absolute<br>
+                right: 5px<br>
+                top: 5px
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <p>Contenedor padre</p>
+        <div class="block-green" style="position: relative;">
+            <strong>positon: relativa</strong>
+            <div class="block-pink" style="position: absolute;">
+                Elemento hijo<br>
+                position: absolute<br>
+                right: 5px<br>
+                top: 5px
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <p>Contenedor padre</p>
+        <div class="block-green" style="position: absolute; left:0; top:0; width: 280px; margin-top:0;">
+            <strong>
+                <br>positon: absolute<br>
+                left: 0<br>
+                top: 0<br>
+            </strong>
+            <div class="block-pink" style="position: absolute;">
+                Elemento hijo<br>
+                right: 5px<br>
+                top: 5px
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <p>Contenedor padre</p>
+        <div class="block-green" style="position: fixed; left:auto; right:0; top:0; width: 280px; margin-top:0;">
+            <strong>
+                <br>positon: fixed<br>
+                left: 0<br>
+                top: 0<br>
+            </strong>
+            <div class="block-pink" style="position: absolute;">
+                Elemento hijo<br>
+                right: 5px<br>
+                top: 5px
+            </div>
+        </div>
+    </div>
+</body>
+</html>
